@@ -3,7 +3,7 @@
 * Writer: James / (Lewis)
 * Customer: Sentry
 
-We did [this article](/how-to) for Sentry before
+We did [this article](/how-to-debug-log-and-monitor-performance-in-node-js.mdx) for Sentry before
 
 But we tried to do too much in a single article as the topics are related but distinct. We should break this into three separate articles (or maybe two and still combine Logging and Debugging).
 
