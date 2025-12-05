@@ -339,83 +339,355 @@ When writing is complete, organize the project directory:
 
 # Current Project Context
 
-**Project:** [Project name]
-**Writer:** [Writer name]
-**Customer:** [Customer name]
-**Target Wordcount:** [Target word count]
-**Article Type:** [Tutorial/Guide/Reference/etc.]
-**Current Phase:** [Research / Code Development / Structure / Content Creation]
-**Status:** [Current status]
+**Project:** Node.js Logging, Debugging, and Performance Monitoring (Refresh)
+**Writer:** James Whitford / (Lewis)
+**Customer:** Sentry
+**Target Wordcount:** TBD (will be split into 2-3 articles)
+**Article Type:** Tutorial/Guide (Refresh)
+**Current Phase:** Article 1 (Logging) - Draft Complete
+**Status:** ✅ LOGGING ARTICLE DRAFT COMPLETE - Awaiting Writer Review
 
 ## Brief Requirements Summary
 
-[Summary of key requirements from brief.md]
+This is a refresh of an existing article that tried to cover too much in one piece:
+- **Original article**: Combined Logging, Debugging, and Performance Monitoring for Node.js
+- **Goal**: Split into 2-3 separate articles (possibly combine Logging + Debugging, or keep all three separate)
+- **Requirements**:
+  - Edit content to match Sentry's voice
+  - Add more Sentry demonstrations while keeping articles useful for non-Sentry users
+  - Link articles to each other
+  - Reference existing coverage matrix to understand what similar content exists
+
+## Completed Work
+
+✅ **Matrix Creation**: A comprehensive matrix of existing Sentry content has been created at `/matrix.csv`
+- Shows coverage across languages/frameworks for Logging, Debugging, and Performance Monitoring topics
+- Provides context for understanding what similar content already exists
+
+✅ **External Research Completed**: Writer has researched top-performing articles for the key search terms
+- **Search terms used**: "logging in node", "debugging node.js", "node performance monitoring"
+- **Research files stored** in `/resources/` organized by topic:
+  - **Logging**:
+    - `resources/logging/w3-node-logging.md`
+    - `resources/logging/dev-logging-and-monitoring-in-nodejs-best-practices.md`
+  - **Debugging**:
+    - `resources/debugging/offficial-nodejs.md`
+  - **Performance Monitoring**:
+    - `resources/performance-monitoring/middleware-nodejs-performance-monitoring.md`
+    - `resources/performance-monitoring/betterstack-nodejs-performance-monitoring.md`
+    - `resources/performance-monitoring/how-to-measure-and-improve-nodejs-apps.md`
+- These files contain the top-performing articles that rank well for these search terms
+- Files include source links for citation purposes
+
+## Article Refresh Process - Step-by-Step
+
+### Step 1: Analyze & Decide Article Split ✅
+**Status:** COMPLETED
+
+**AI Assistant Task:**
+- Analyze the original article (`how-to-debug-log-and-monitor-performance-in-node-js.mdx`)
+- Review the matrix (`matrix.csv`) to understand existing Sentry coverage patterns
+- Review the top-performing competitor articles in `resources/` to understand:
+  - How competitors structure their content
+  - Whether they combine or separate these topics
+  - What makes them rank well
+- **Provide a recommendation** to the writer: Should we split into 2 articles or 3 articles?
+  - Option A: 2 articles (Logging + Debugging combined, Performance Monitoring separate)
+  - Option B: 3 articles (Logging, Debugging, Performance Monitoring all separate)
+  - Include reasoning based on:
+    - What the matrix shows about existing coverage
+    - How top-performing competitors structure their content
+    - SEO considerations
+    - Content overlap/distinctiveness
+
+**Writer will make the final decision after reviewing the recommendation.**
+
+---
+
+### Step 2: Create Draft Files ✅
+**Status:** COMPLETED
+
+**Decision:** 3 separate articles (Logging, Debugging, Performance Monitoring)
+**Files Created:**
+- `draft-logging.md`
+- `draft-debugging.md`
+- `draft-performance-monitoring.md`
+
+**AI Assistant Task:**
+- Based on writer's decision from Step 1, create draft files:
+  - If 2 articles: `draft-logging-debugging.md` and `draft-performance-monitoring.md`
+  - If 3 articles: `draft-logging.md`, `draft-debugging.md`, and `draft-performance-monitoring.md`
+- These will be the working files for each article
+
+---
+
+### Step 3: Competitive Analysis (Per Article) ✅
+**Status:** COMPLETED for Logging Article
+
+**Process:** Repeat this step for each article, one at a time
+
+**Logging Article:** ✅ Completed - Analysis documented in `draft-logging.md`
+
+**AI Assistant Task:**
+For the current article being worked on:
+- Review the equivalent top-performing articles in `resources/`
+- Analyze what makes them successful:
+  - Structure and content organization
+  - Depth and comprehensiveness
+  - Code examples and practical demos
+  - SEO factors (keywords, headers, readability)
+  - Reputation/authority signals
+- Identify opportunities to create something **better**:
+  - More useful/practical for developers
+  - More comprehensive or unique insights
+  - Better Sentry integration examples
+  - Better SEO optimization
+  - More reputable/authoritative
+- Document findings in the respective draft file
+
+**Writer reviews and approves the analysis before moving to Step 4.**
+
+---
+
+### Step 4: Create Article Skeleton (Per Article) ✅
+**Status:** COMPLETED for Logging Article
+
+**Process:** Repeat this step for each article, one at a time
+
+**Logging Article:** ✅ Completed - Skeleton documented in `draft-logging.md`
+
+**AI Assistant Task:**
+For the current article:
+- Create a detailed skeleton/outline based on:
+  - **Writing Rules**: Especially `writing-rules/how-to-write-for-developers.md`
+  - **Sentry Voice**: `writing-rules/sentry-voice.md`
+  - **Good Example**: `writing-rules/good-example-article.md`
+  - Competitive analysis from Step 3
+  - Best practices from top-performing articles
+- Include:
+  - Section headings and subheadings
+  - Brief notes on what each section covers
+  - Placeholders for code examples needed
+  - Notes on where to link to other Sentry docs
+  - Notes on where to link to related articles (the other articles in this series)
+- Write skeleton in the appropriate draft file
+
+**Writer reviews and approves skeleton before moving to Step 5.**
+
+---
+
+### Step 5: Research Phase - Vector Store Queries (Per Article) ✅
+**Status:** COMPLETED for Logging Article
+
+**Process:** Repeat this step for each article, one at a time
+
+**Logging Article:** ✅ Completed - Research documented in `draft-logging.md`
+- Vector store queries completed for Sentry logging integration
+- Key findings: Sentry.logger API, console integration, breadcrumbs, structured logs
+
+**AI Assistant Task:**
+For the current article:
+- Use the vector store (RAG tools) to research Sentry-specific information:
+  - Query for existing Sentry articles on the same topic
+  - Find Sentry documentation for relevant features
+  - Locate code examples and patterns
+  - Identify proper Sentry terminology
+  - Find links to related Sentry docs
+- Also reference the `resources/` folder for additional context
+- Document all findings with:
+  - Key information discovered
+  - Source links (for external resources in `resources/`)
+  - Sentry doc links (infer from file paths in RAG responses: `github.com/getsentry/sentry-docs/tree/master/docs/[path]`)
+  - Code examples found
+  - Terminology to use
+
+**Store research findings in `research/[article-topic]-sentry-research.md`**
+
+---
+
+### Step 6: Write Article Section-by-Section (Per Article) ✅
+**Status:** COMPLETED for Logging Article
+
+**Process:** Repeat this step for each article, one at a time
+
+**Logging Article:** ✅ DRAFT COMPLETE - Full article written in `draft-logging.md`
+
+**Sections Completed:**
+- Introduction
+- Why Logging Matters in Node.js
+- Console Logging: The Basics
+- Understanding Log Levels
+- Structured Logging: Log Objects, Not Strings
+- Choosing a Logging Library
+- Winston: Feature-Rich Logging
+- Pino: High-Performance Logging
+- Bunyan: Structured Logging with CLI Tools
+- Logging Best Practices
+- Logging to Files and Managing Log Growth
+- Production Logging Considerations
+- **Integrating Sentry for Error Tracking and Logging** (BOTH standalone and integration approaches)
+- Summary
+- What's Next
+
+**Key Achievements:**
+✅ Avoided AI writing style (no over-reliance on bulleted lists)
+✅ Applied Sentry voice (informative, approachable, no hype)
+✅ Followed writing rules (no word kill-list words, proper grammar)
+✅ Included Sentry integration as BOTH standalone and complementary approach
+✅ All code examples included
+✅ Structured for skimmers with clear headings
+✅ Links to related articles in series
+
+**AI Assistant Task:**
+Working through the skeleton from Step 4, write each section iteratively:
+
+**For Each Section:**
+1. Writer directs: "Write the [section name] section"
+2. AI Assistant writes the section using:
+   - Research findings from Step 5
+   - Code examples from `resources/` files
+   - Sentry documentation and examples from vector store
+   - Writing rules (grammar, voice, style)
+3. **Include proper links**:
+   - External source links (from `resources/` files)
+   - Sentry doc links (infer from RAG response paths: `https://docs.sentry.io/[path]`)
+   - Links to related articles in this series (once they're created)
+4. Writer reviews and approves section
+5. Move to next section
+
+**Continue until entire article is complete.**
+
+**CRITICAL Requirements:**
+- Follow writing rules strictly (`writing-rules/` folder)
+- Use Sentry voice and terminology
+- Include working code examples
+- Add source citations and links
+- Link to other Sentry documentation
+- Link to related articles in the series
+- Make article useful for both Sentry users and non-Sentry users
+
+---
+
+### Step 7: Move to Next Article ⏸️
+**Status:** READY - Awaiting Writer Review and Approval of Logging Article
+
+**Process:**
+Once the logging article is reviewed and approved:
+1. Move to **Debugging Article** (repeat Steps 3-6)
+2. Then move to **Performance Monitoring Article** (repeat Steps 3-6)
+
+**Next Steps:**
+- Writer reviews `draft-logging.md`
+- Writer provides feedback/approval
+- If approved, AI proceeds to Debugging Article (Step 3)
+- If changes needed, AI makes revisions to Logging Article
+
+---
+
+## 🎯 CURRENT STATUS SUMMARY
+
+**✅ ARTICLE 1 (LOGGING) - DRAFT COMPLETE**
+
+The Node.js Logging article has been fully written and is ready for writer review.
+
+**Location:** `/draft-logging.md`
+
+**What's Included:**
+- ~900 lines of content covering console logging → Winston/Pino/Bunyan → Sentry integration
+- Sentry presented as BOTH standalone logger AND integration with existing loggers
+- Dual-logger pattern (Winston for ops + Sentry for errors) thoroughly explained
+- All sections follow writing rules (no AI tendencies, Sentry voice applied)
+- Ready for review and feedback
+
+**Next Steps:**
+1. **Writer reviews `draft-logging.md`**
+2. **Writer provides feedback or approval**
+3. If approved → Move to Debugging Article
+4. If changes needed → AI makes revisions
+
+---
+
+## Current Phase Details (Archive)
 
 ---
 
 ## Phase Progress
 
-### Phase 1: Research ✅ / 🔄 / ⏸️
-**Status:** [Not Started / In Progress / Completed]
+### Phase 0: Pre-Planning ✅
+**Status:** Completed
 
-**Topics Researched:**
-- [Topic 1] - Findings in `research/[filename].md`
-- [Topic 2] - Findings in `research/[filename].md`
-
-**Key Findings:**
-- [Note important findings that will inform the article]
-
----
-
-### Phase 2: Code Development ✅ / 🔄 / ⏸️
-**Status:** [Not Started / In Progress / Completed]
-
-**Code Examples Created & Tested:**
-- `code/[filename].js` - [What it demonstrates]
-- `code/[filename].js` - [What it demonstrates]
-
-**Testing Notes:**
-- [Any important notes about code testing]
+**Completed:**
+- ✅ Matrix of existing content created (`/matrix.csv`)
+- ✅ Brief reviewed and understood
+- ✅ External research completed (`resources/` folder)
+- ✅ Search terms identified and researched
+- ✅ Top-performing competitor articles collected and documented
 
 ---
 
-### Phase 3: Structure ✅ / 🔄 / ⏸️
-**Status:** [Not Started / In Progress / Completed]
+### Article Refresh Steps (Current Workflow)
 
-**Article Outline:** [Reference to draft.md structure]
+**Step 1: Analyze & Decide Article Split** ⏸️
+- Status: Ready to Start
+- Task: AI provides recommendation, Writer decides
 
-**Sections:**
-1. [Section 1]
-2. [Section 2]
-3. [Section 3]
-...
+**Step 2: Create Draft Files** ⏸️
+- Status: Awaiting Step 1 decision
 
----
+**Step 3: Competitive Analysis (Per Article)** ⏸️
+- Status: Not Started
+- Process: One article at a time
 
-### Phase 4: Content Creation ✅ / 🔄 / ⏸️
-**Status:** [Not Started / In Progress / Completed]
+**Step 4: Create Article Skeleton (Per Article)** ⏸️
+- Status: Not Started
+- Process: One article at a time
 
-**Completed Sections:**
-- [x] [Section name]
-- [x] [Section name]
-- [ ] [Section name] - In progress
-- [ ] [Section name] - Not started
+**Step 5: Research Phase - Vector Store Queries (Per Article)** ⏸️
+- Status: Not Started
+- Process: One article at a time
 
-**Current Section:** [Which section you're working on]
+**Step 6: Write Article Section-by-Section (Per Article)** ⏸️
+- Status: Not Started
+- Process: One article at a time, section-by-section
+
+**Step 7: Move to Next Article** ⏸️
+- Status: Not Started
+- Process: Repeat Steps 3-6 for each article
 
 ---
 
 ## Important Notes
 
-[Any important notes or considerations for this project]
+- Original article combined three distinct topics: Logging, Debugging, and Performance Monitoring
+- These topics are related but distinct enough to warrant separation
+- Sentry has coverage for these topics across various languages/frameworks (see matrix.csv)
+- Articles should demonstrate Sentry integration while remaining useful for developers not using Sentry
+- Final articles should link to each other for related topics
 
 ## Files & Resources
 
-**Research:**
-- `research/[filename].md` - [Description]
+**Project Documents:**
+- `/brief.md` - Project brief and requirements
+- `/matrix.csv` - Comprehensive overview of existing Sentry content across languages/frameworks
+- `/search-terms.md` - Search terms used for external research
 
-**Code:**
-- `code/[filename].js` - [Description]
+**Original Article to Refresh:**
+- `/how-to-debug-log-and-monitor-performance-in-node-js.mdx` - Combined article covering all three topics
+
+**External Research (Top-Performing Competitor Articles):**
+
+**Logging:**
+- `resources/logging/w3-node-logging.md` - W3Schools Node.js logging guide
+- `resources/logging/dev-logging-and-monitoring-in-nodejs-best-practices.md` - DEV.to logging best practices
+
+**Debugging:**
+- `resources/debugging/offficial-nodejs.md` - Official Node.js debugging documentation
+
+**Performance Monitoring:**
+- `resources/performance-monitoring/middleware-nodejs-performance-monitoring.md` - Middleware performance monitoring guide
+- `resources/performance-monitoring/betterstack-nodejs-performance-monitoring.md` - Better Stack performance monitoring guide
+- `resources/performance-monitoring/how-to-measure-and-improve-nodejs-apps.md` - Node.js performance measurement guide
 
 **Key References:**
-- [Link or file reference]
+- Ritza Sentry Repo: http://github.com/ritza-co/sentry
+- Vector Store: `vector-tools/` - Query with `cd vector-tools && ./venv/bin/python query.py "search term"`
